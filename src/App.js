@@ -14,7 +14,7 @@ const App = () => {
   )
 
   const handleResourceClick = (resource) => {
-    setState({currentResource: resource, actionsArray: state.resourcesMap.get(state.currentResource.id)})
+    setState({currentResource: resource, actionsArray: state.resourcesMap.get(resource.id)})
   }
 
   useEffect(() => {
