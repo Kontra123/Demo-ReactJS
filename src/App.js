@@ -1,29 +1,45 @@
-import React, { useState } from 'react';
-import { resources, actions } from './files/data.json'
+import React, { useEffect, useReducer } from 'react';
 import './App.css';
 import ResourceDetails from './components/resources/resourceDetails/ResourceDetails'
 import ResourceMain from './components/resources/ResourceMain.js';
 import {initResourcesMap} from './utils/resourceUtils'
 import MyProvider from './context/MyProvider'
 
-let resourcesMap = initResourcesMap(resources, actions);
 
 const App = () => {
-  const [currentResource, setCurrentResource] = useState(resources[0])
-  const [actionsArray, setActionsArray] = useState(resourcesMap.get(currentResource.id))
+
+  const [state, setState] = useReducer(
+    (state, newState) => ({...state, ...newState}),
+    {currentResource: null, resources: null, actionsArray: null,  resourcesMap: null}
+  )
 
   const handleResourceClick = (resource) => {
-    setCurrentResource(resource);
-    setActionsArray(resourcesMap.get(currentResource.id))
+    setState({currentResource: resource, actionsArray: state.resourcesMap.get(state.currentResource.id)})
   }
+
+  useEffect(() => {
+    const runEffect = async () => {
+      const jsonFile = await import('./files/data.json')
+
+      //will create map between resourceId and his actions
+      const resourcesMap = initResourcesMap(jsonFile.resources, jsonFile.actions)
+
+      setState({currentResource: jsonFile.resources[0], resources: jsonFile.resources,
+        resourcesMap: resourcesMap, actionsArray: resourcesMap.get(jsonFile.resources[0].id)})
+
+    };
+
+    runEffect();
+
+  }, [] );
 
   return (
       <div className="container">
         <h1 className="demo-header">Demo App</h1>
         <div className="flex-row">
-        <MyProvider currentResource={currentResource}>
-            <ResourceMain resources={resources} resourceClick={handleResourceClick} />
-            <ResourceDetails actionsArray={actionsArray} />
+         <MyProvider currentResource={state.currentResource}>
+            <ResourceMain resources={state.resources} resourceClick={handleResourceClick} />
+            <ResourceDetails actionsArray={state.actionsArray} />
         </MyProvider>
         </div>
       </div>

@@ -10,7 +10,7 @@ const GeneralDetails = props => {
     return (
         <MyContext.Consumer>
             {context => (
-                <div className="general-details-layout">
+                context.currentResource && <div className="general-details-layout">
                     <ResourceItemTitle title={props.title} />
                     <GeneralDetailsContent title={'NAME'} value={context.currentResource.name} />
                     <GeneralDetailsContent title={'DESCRIPTION'} value={context.currentResource.description} />

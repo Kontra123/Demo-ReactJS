@@ -13,7 +13,7 @@ const ResourceDetails = props => {
         <div className="main-resource-item-layout">
           <div className="resource-item-layout">
             <h3 className="resource-item-header">
-              <label className="resource-text-header">{context.currentResource.name}</label>
+              <label className="resource-text-header">{context.currentResource && context.currentResource.name}</label>
             </h3>
             <div className="flex-row">
               <div className="general-details-content">
