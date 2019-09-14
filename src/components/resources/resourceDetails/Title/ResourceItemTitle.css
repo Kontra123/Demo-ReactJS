@@ -1,0 +1,10 @@
+.resource-item-title-layout {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+}
+
+.resource-item-title-text {
+    color:rgb(20, 156, 247);
+    font-weight: 500;
+}

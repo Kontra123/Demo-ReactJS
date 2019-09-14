@@ -1,0 +1,51 @@
+.main-resource-item-layout {
+    flex-direction: column;
+    background-color: grey;
+    height: 90vh;
+    flex: 1;
+    display: flex;
+  }
+
+  .resource-item-layout {
+    background-color: white;
+    height:60vh;
+    margin-left: 100px;
+    margin-Right: 100px;
+    margin-Top: 50px;
+    flex-direction: column;
+  
+  }
+
+  .resource-item-header {
+    background-color: rgb(80, 212, 168);
+    height:15vh;
+    margin-top: 0;
+    flex:1;
+    margin-bottom: 0;
+  }
+  
+  .general-details-content {
+    flex: 1;
+    height: calc(60vh - 15vh);
+    margin-left: 20px;
+  }
+
+  .permitted-actions-content {
+    flex: 1;
+    height: calc(60vh - 15vh);
+    margin-right: 20px;
+  }
+
+  .resource-text-header {
+    color: white;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-top: 10px;
+    display: flex;
+  }
+
+  .flex-row {
+    display: flex;
+  }
+  
+  

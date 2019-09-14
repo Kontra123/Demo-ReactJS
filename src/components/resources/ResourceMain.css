@@ -1,0 +1,14 @@
+.main-resource-layout {
+    flex-direction: column;
+    margin-top: 20px;
+    width:30vmin;
+}
+  
+.items-title {
+    padding-left: 10px;
+    color: #6e788b;
+    font-weight: 450;
+    font-size: 1.2em; 
+    display: flex;
+    margin-bottom: 10px;
+}
