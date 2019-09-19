@@ -8,12 +8,10 @@
 
   .resource-item-layout {
     background-color: white;
-    height:60vh;
     margin-left: 100px;
     margin-Right: 100px;
     margin-Top: 50px;
     flex-direction: column;
-  
   }
 
   .resource-item-header {
@@ -26,13 +24,11 @@
   
   .general-details-content {
     flex: 1;
-    height: calc(60vh - 15vh);
     margin-left: 20px;
   }
 
   .permitted-actions-content {
     flex: 1;
-    height: calc(60vh - 15vh);
     margin-right: 20px;
   }
 

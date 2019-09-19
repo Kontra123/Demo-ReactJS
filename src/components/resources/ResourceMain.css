@@ -1,7 +1,8 @@
 .main-resource-layout {
     flex-direction: column;
     margin-top: 20px;
-    width:30vmin;
+    width:30vh;
+    min-width: 120px;
 }
   
 .items-title {
