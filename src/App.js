@@ -4,6 +4,7 @@ import ResourceDetails from './components/resources/resourceDetails/ResourceDeta
 import ResourceMain from './components/resources/ResourceMain.js';
 import {initResourcesMap} from './utils/resourceUtils'
 import MyProvider from './context/MyProvider'
+import mockData from './files/data.json'
 
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
 
   useEffect(() => {
     const runEffect = async () => {
-      const jsonFile = await import('./files/data.json')
+      const jsonFile = await mockData
 
       //will create map between resourceId and his actions
       const resourcesMap = initResourcesMap(jsonFile.resources, jsonFile.actions)
