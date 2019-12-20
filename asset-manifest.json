@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Demo-ReactJS/static/css/main.01ca0d6e.chunk.css",
+    "main.js": "/Demo-ReactJS/static/js/main.c8e826b8.chunk.js",
+    "main.js.map": "/Demo-ReactJS/static/js/main.c8e826b8.chunk.js.map",
+    "runtime~main.js": "/Demo-ReactJS/static/js/runtime~main.6ad7bf39.js",
+    "runtime~main.js.map": "/Demo-ReactJS/static/js/runtime~main.6ad7bf39.js.map",
+    "static/js/2.9f474f12.chunk.js": "/Demo-ReactJS/static/js/2.9f474f12.chunk.js",
+    "static/js/2.9f474f12.chunk.js.map": "/Demo-ReactJS/static/js/2.9f474f12.chunk.js.map",
+    "index.html": "/Demo-ReactJS/index.html",
+    "precache-manifest.69244a0d581a362b2c55130a75e20378.js": "/Demo-ReactJS/precache-manifest.69244a0d581a362b2c55130a75e20378.js",
+    "service-worker.js": "/Demo-ReactJS/service-worker.js",
+    "static/css/main.01ca0d6e.chunk.css.map": "/Demo-ReactJS/static/css/main.01ca0d6e.chunk.css.map",
+    "static/media/active.svg": "/Demo-ReactJS/static/media/active.510613e2.svg",
+    "static/media/arrow-right.svg": "/Demo-ReactJS/static/media/arrow-right.c2a561be.svg",
+    "static/media/help-12.svg": "/Demo-ReactJS/static/media/help-12.aa19cc60.svg"
+  }
+}
