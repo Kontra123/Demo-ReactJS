@@ -1,7 +1,6 @@
 .main-resource-item-layout {
     flex-direction: column;
     background-color: grey;
-    height: 90vh;
     flex: 1;
     display: flex;
   }

@@ -1,25 +1,15 @@
+.main {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 80px auto;
+}
+
 .demo-header {
-  background-color: #5f646e;
-  color: #f1ebe1cc;
-  height:10vh;
-  font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
+    display: grid;
+    background-color: #5f646e;
+    color: #f1ebe1cc;
+    font-weight: 400;
+    margin: 0 0;
+    line-height: 1em;
+    align-items: center;
 }
-
-/* .main-resource-layout {
-  flex-direction: column;
-  margin-top: 20px;
-  width:30vmin;
-}
-
-.items-title {
-  padding-left: 10px;
-  color: #6e788b;
-  font-weight: 450;
-  font-size: 1.2em; 
-  display: flex;
-  margin-bottom: 10px;
-} */
