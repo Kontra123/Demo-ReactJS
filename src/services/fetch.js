@@ -14,7 +14,11 @@ class FetchService {
         return fetch(request, fetchMode).then((response) => {
                 return (response.json());
             }
-        );
+        )
+        .catch((error) => {
+            return ([]);
+        }
+    );
     };
 
     post = async (url, body) => {
