@@ -2,9 +2,9 @@ import React, { useEffect, useReducer } from 'react';
 import './app.scss';
 import ResourceDetails from './components/resources/resourceDetails/ResourceDetails'
 import ResourceMain from './components/resources/ResourceMain.js';
-import { initResourcesMap } from './utils/resourceUtils'
+import { initResourcesMap } from './services/utils'
 import MyProvider from './context/MyProvider'
-import resourcesMockData from './files/data.json'
+import services from './services/services';
 
 
 const App = () => {
@@ -20,14 +20,16 @@ const App = () => {
 
     useEffect(() => {
         const getResources = async () => {
-            const jsonFile = await resourcesMockData
+            const [resources, actions] = await Promise.all([
+                services.getResources(),  services.getActions()
+            ])
 
             //will create map between resourceId and his actions
-            const resourcesMap = initResourcesMap(jsonFile.resources, jsonFile.actions)
+            const resourcesMap = initResourcesMap(resources, actions)
 
             setState({
-                currentResource: jsonFile.resources[0], resources: jsonFile.resources,
-                resourcesMap: resourcesMap, actionsArray: resourcesMap.get(jsonFile.resources[0].id)
+                currentResource: resources[0], resources: resources,
+                resourcesMap: resourcesMap, actionsArray: resourcesMap.get(resources[0].id)
             })
 
         };
