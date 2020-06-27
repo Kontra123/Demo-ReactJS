@@ -1,15 +1,23 @@
+@import "./styles/variables.scss";
+
 .main {
     height: 100vh;
     display: grid;
     grid-template-rows: 80px auto;
-}
 
-.demo-header {
-    display: grid;
-    background-color: #5f646e;
-    color: #f1ebe1cc;
-    font-weight: 400;
-    margin: 0 0;
-    line-height: 1em;
-    align-items: center;
+    .demo-header {
+        display: grid;
+        align-items: center;
+        background-color: var(--color-1);
+        color:var(--color-2);
+        font-weight: var(--weight-2);
+        margin: 0 0;
+        line-height: 1em;
+        padding-left: 5px;
+    }
+    
+    .demo-content {
+        display: grid;
+        grid-template-columns: 30vh auto;
+    }
 }

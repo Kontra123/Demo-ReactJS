@@ -1,46 +1,35 @@
 .main-resource-item-layout {
-    flex-direction: column;
-    background-color: grey;
-    flex: 1;
-    display: flex;
-  }
+  flex-direction: column;
+  background-color: var(--color-5);
+  width: 100%;
 
   .resource-item-layout {
-    background-color: white;
-    margin-left: 100px;
-    margin-Right: 100px;
-    margin-Top: 50px;
-    flex-direction: column;
-  }
+    background-color: var(--color-7);
+    margin: 50px 100px;
+    border-radius: 5px;
 
-  .resource-item-header {
-    background-color: rgb(80, 212, 168);
-    height:15vh;
-    margin-top: 0;
-    flex:1;
-    margin-bottom: 0;
-  }
-  
-  .general-details-content {
-    flex: 1;
-    margin-left: 20px;
-  }
+    .resource-item-header {
+      background-color: var(--color-6);
+      height:15vh;
+      border-radius: 5px;
+      padding-left: 20px;
+      padding-top: 10px;
 
-  .permitted-actions-content {
-    flex: 1;
-    margin-right: 20px;
-  }
+      .resource-text-header {
+        color: var(--color-7);
+        font-weight: var(--weight-3);
+      }
+    }
 
-  .resource-text-header {
-    color: white;
-    font-weight: 400;
-    padding-left: 10px;
-    padding-top: 10px;
-    display: flex;
-  }
+    .resource-content-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      margin-left: 20px;
+      margin-right: 20px;
+    } 
+  }  
+}
 
-  .flex-row {
-    display: flex;
-  }
-  
-  
+
+

@@ -2,16 +2,14 @@
     display: flex;
     margin-top: 20px;
     flex-direction: column;
-     margin-top: 10px;
-    background-color: rgb(240, 236, 236);
+    margin-top: 10px;
+    background-color: var(--color-8);
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
 }
 
 .resource-item-content-value-text {
-    color:rgb(73, 72, 72);
-    font-weight: 300;
-    font-size: 12px;
-    font-weight: 500;
+    font-size: var(--size-1);
+    font-weight: var(--weight-3);
 }

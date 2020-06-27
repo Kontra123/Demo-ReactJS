@@ -5,14 +5,14 @@ import PermittedActionsContent from "./PermittedActionsContent/PermittedActionsC
 
 
 const PermittedActions = props => {
-    const {actionsArray} = props;
+    const {actionsArray, title} = props;
 
     const permittedActionsViews = actionsArray && actionsArray.map(action => 
     <PermittedActionsContent key={action.id} item={action.name}/>)
 
     return (
         <div className="permitted-actions-layout">
-            <ResourceItemTitle title={props.title}/>
+            <ResourceItemTitle title={title}/>
             <div className="permitted-actions-content-layout">
                 {permittedActionsViews}
             </div>

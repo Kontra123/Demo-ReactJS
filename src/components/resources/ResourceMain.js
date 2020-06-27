@@ -1,15 +1,17 @@
 import React from 'react'
-import "./ResourceMain.css";
+import "./resourceMain.scss";
 import ResourceItem from './resourceItem/ResourceItem'
 import MyContext from '../../context/MyContext'
 
 const ResourceMain = props => {
     const {resources} = props
+    
     let resourcesViews =  resources && resources.map(resource =>
-        <MyContext.Consumer>
+        <MyContext.Consumer key={resource.id}>
             {context => ( 
-                <ResourceItem key={resource.id} resource={resource} 
-                isSelected={resource.id === context.currentResource.id} resourceClick={props.resourceClick} />
+                <ResourceItem resource={resource} 
+                isSelected={resource.id === context.currentResource.id} 
+                resourceClick={props.resourceClick} />
             )}
         </MyContext.Consumer>
     )
@@ -17,7 +19,9 @@ const ResourceMain = props => {
     return (
         <div className="main-resource-layout">
             <label className="items-title">Items</label>
-            {resourcesViews}
+            <div className="resources-views">
+                {resourcesViews}
+            </div>
         </div>
     )
 }

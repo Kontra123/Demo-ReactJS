@@ -7,11 +7,13 @@ import MyContext from '../../../../context/MyContext'
 
 const GeneralDetails = props => {
 
+    const { title } = props
+
     return (
         <MyContext.Consumer>
             {context => (
                 context.currentResource && <div className="general-details-layout">
-                    <ResourceItemTitle title={props.title} />
+                    <ResourceItemTitle title={title} />
                     <GeneralDetailsContent title={'NAME'} value={context.currentResource.name} />
                     <GeneralDetailsContent title={'DESCRIPTION'} value={context.currentResource.description} />
                     <GeneralDetailsContent title={'RESOURCE TYPE'} value={context.currentResource.resourceType} />

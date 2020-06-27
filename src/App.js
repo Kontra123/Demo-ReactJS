@@ -39,7 +39,7 @@ const App = () => {
     return (
         <div className="main">
             <h1 className="demo-header">Demo App</h1>
-            <div className="flex-row">
+            <div className="demo-content">
                 <MyProvider currentResource={state.currentResource}>
                     <ResourceMain resources={state.resources} resourceClick={handleResourceClick} />
                     <ResourceDetails actionsArray={state.actionsArray} />
