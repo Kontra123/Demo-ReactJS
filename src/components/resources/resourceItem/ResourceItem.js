@@ -8,7 +8,7 @@ const ResourceItem = props => {
   const { resourceClick, resource, isSelected } = props
 
   const resourceItemClick = () => {
-    resourceClick(resource)
+    resourceClick()
   }
 
   return (

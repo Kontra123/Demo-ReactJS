@@ -4,14 +4,14 @@ import ResourceItem from './resourceItem/ResourceItem'
 import MyContext from '../../context/MyContext'
 
 const ResourceMain = props => {
-    const {resources} = props
+    const {resources, resourceClick } = props
     
-    let resourcesViews =  resources && resources.map(resource =>
+    let resourcesViews = resources && resources.map(resource =>
         <MyContext.Consumer key={resource.id}>
             {context => ( 
                 <ResourceItem resource={resource} 
                 isSelected={resource.id === context.currentResource.id} 
-                resourceClick={props.resourceClick} />
+                resourceClick={() => resourceClick(resource)} />
             )}
         </MyContext.Consumer>
     )
