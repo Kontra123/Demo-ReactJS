@@ -1,5 +1,5 @@
 import React from 'react'
-import "./PermittedActionsContent.css";
+import "./permittedActionsContent.scss";
 
 const PermittedActionsContent = props => {
 

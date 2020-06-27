@@ -1,5 +1,5 @@
 import React from 'react'
-import "./ResourceDetails.css";
+import "./resourceDetails.scss";
 import GeneralDetails from './GeneralDetails/GeneralDetails';
 import PermittedActions from './PermittedActions/PermittedActions'
 import MyContext from '../../../context/MyContext'

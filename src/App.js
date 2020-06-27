@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from 'react';
-import './App.css';
+import './app.scss';
 import ResourceDetails from './components/resources/resourceDetails/ResourceDetails'
 import ResourceMain from './components/resources/ResourceMain.js';
 import { initResourcesMap } from './utils/resourceUtils'

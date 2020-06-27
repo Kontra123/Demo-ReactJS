@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import active from '../../../assets/active.svg'
 import arrowRight from '../../../assets/arrow-right.svg'
-import "./ResourceItem.css";
+import "./resourceItem.scss";
 
 const ResourceItem = props => {
 

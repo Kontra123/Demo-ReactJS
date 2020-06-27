@@ -1,5 +1,5 @@
 import React from 'react'
-import "./ResourceItemTitle.css";
+import "./resourceItemTitle.scss";
 import help from '../../../../assets/help-12.svg'
 
 const ResourceItemTitle = props => {

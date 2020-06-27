@@ -1,5 +1,5 @@
 import React from 'react'
-import "./PermittedActions.css";
+import "./permittedActions.scss";
 import ResourceItemTitle from "../Title/ResourceItemTitle"
 import PermittedActionsContent from "./PermittedActionsContent/PermittedActionsContent"
 

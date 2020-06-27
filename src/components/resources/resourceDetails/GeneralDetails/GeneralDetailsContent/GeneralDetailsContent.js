@@ -1,5 +1,5 @@
 import React from 'react'
-import "./GeneralDetailsContent.css";
+import "./generalDetailsContent.scss";
 
 const GeneralDetailsContent = props => {
 

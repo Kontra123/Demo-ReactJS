@@ -1,5 +1,5 @@
 import React from 'react'
-import "./GeneralDetails.css";
+import "./generalDetails.scss";
 import ResourceItemTitle from "../Title/ResourceItemTitle"
 import GeneralDetailsContent from "./GeneralDetailsContent/GeneralDetailsContent"
 import MyContext from '../../../../context/MyContext'
