@@ -12,6 +12,7 @@
 
     .resources-views {
         margin-top: 20px;
+        
         & > :first-child {
             border-top: 1px solid var(--color-4);
         }

@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useEffect, useState } from 'react';
 import './app.scss';
 import ResourceDetails from './components/resources/resourceDetails/ResourceDetails'
 import ResourceMain from './components/resources/ResourceMain.js';
@@ -9,13 +9,19 @@ import services from './services/services';
 
 const App = () => {
 
-    const [state, setState] = useReducer(
-        (state, newState) => ({ ...state, ...newState }),
-        { currentResource: null, resources: null, actionsArray: null, resourcesMap: null }
-    )
+    const [state, setState] = useState({ 
+            currentResource: null, 
+            resources: null, 
+            actionsArray: null,  
+            resourcesMap: null 
+    })
 
     const handleResourceClick = (resource) => {
-        setState({ currentResource: resource, actionsArray: state.resourcesMap.get(resource.id) })
+        setState({ 
+            ...state, 
+            currentResource: resource,
+            actionsArray: state.resourcesMap.get(resource.id) 
+        })
     }
 
     useEffect(() => {
@@ -28,8 +34,11 @@ const App = () => {
             const resourcesMap = initResourcesMap(resources, actions)
 
             setState({
-                currentResource: resources[0], resources: resources,
-                resourcesMap: resourcesMap, actionsArray: resourcesMap.get(resources[0].id)
+                ...state,
+                currentResource: resources[0], 
+                resources: resources,
+                resourcesMap: resourcesMap, 
+                actionsArray: resourcesMap.get(resources[0].id)
             })
 
         };
