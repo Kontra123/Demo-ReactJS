@@ -6,12 +6,15 @@ import MainView from './views/mainView/MainView.view';
 const App = () => {
 
     return (
-        <Router>
-            <Switch>
-                <Redirect from="/" exact to="/main"/>
-                <Route path="/main" component={MainView} />
-            </Switch>
-        </Router>
+        // <Router>
+        //     <Switch>
+        //         <Redirect from="/" exact to="/main"/>
+        //         <Route path="/main" component={MainView} />
+        //     </Switch>
+        // </Router>
+        <div>
+            test
+        </div>
     );
 
 }
