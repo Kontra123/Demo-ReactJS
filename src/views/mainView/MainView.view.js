@@ -45,7 +45,7 @@ const MainView = props => {
             }
             else {
                 currentSource = resources[0];
-                // history.replace(`/main?item=1`);
+                history.replace(`/main?item=1`);
             }
 
             setState({
