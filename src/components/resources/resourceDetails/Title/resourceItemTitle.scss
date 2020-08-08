@@ -8,7 +8,24 @@
         font-size: var(--size-2);
     }
 
-    img {
-        padding-top: 2px;
+    .img-view {
+
+        display: grid;
+        position: relative;
+
+        img {
+            padding-top: 2px;
+        }
+    
+        span {
+            position: absolute;
+            font-size: 8px;
+            right: -7px;
+            top: -10px;
+            display: block;
+            width: 100%;
+            white-space: nowrap;
+        }
     }
+
 }

@@ -19,7 +19,7 @@ class Services {
             return actions;
         }
         else {
-            return  resourcesMockData.actions;
+            return resourcesMockData.actions;
         }
     }
 
