@@ -1,9 +1,10 @@
 {
-  "homepage": "http://Kontra123.github.io/Demo-ReactJS",
+  "homepage": "https://resources-ea1c4.web.app",
   "name": "resources",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase-admin": "^9.0.0",
     "node-sass": "^4.14.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -34,6 +35,8 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^7.6.0",
+    "firebase-functions": "^3.9.0",
     "gh-pages": "^2.1.1"
   }
 }
