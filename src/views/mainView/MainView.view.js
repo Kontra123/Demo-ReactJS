@@ -34,7 +34,7 @@ const MainView = props => {
                 services.getResources(), services.getActions()
             ])
 
-            //will create map between resourceId and his actions
+            // swill create map between resourceId and his actions
             const resourcesMap = initResourcesMap(resources, actions)
 
             const params = new URLSearchParams(location.search);
