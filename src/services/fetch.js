@@ -6,7 +6,7 @@ class FetchService {
         const headers = {
             'Content-Type': 'application/x-www-form-urlencoded'
         }
-        const request = new Request(`http://www.json-generator.com/api/json/get/${url}`, {
+        const request = new Request(`https://www.json-generator.com/api/json/get/${url}`, {
             method: 'GET',
             headers: headers,
         });
@@ -25,7 +25,7 @@ class FetchService {
         const headers = {
             'Content-Type': 'application/x-www-form-urlencoded'
         };
-        const request = new Request(`http://www.json-generator.com/api/json/get/${url}`, {
+        const request = new Request(`https://www.json-generator.com/api/json/get/${url}`, {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(body)
