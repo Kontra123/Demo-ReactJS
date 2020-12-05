@@ -1,20 +1,25 @@
 .main-resource-item-layout {
   flex-direction: column;
   background-color: var(--color-5);
-  width: 100%;
 
   .resource-item-layout {
     background-color: var(--color-7);
     margin: 50px 100px;
     border-radius: 5px;
+    display: grid;
+    grid-template-rows: minmax(100px, 30%) auto;
+ 
+    @media (max-width: 615px) {
+      margin: 50px auto;
+      max-width: 270px;
+    }
 
     .resource-item-header {
       background-color: var(--color-6);
-      height:15vh;
-      border-radius: 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
       padding-left: 20px;
       padding-top: 10px;
-
       .resource-text-header {
         color: var(--color-7);
         font-weight: var(--weight-3);

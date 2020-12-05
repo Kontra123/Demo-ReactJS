@@ -1,5 +1,5 @@
 .main {
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-rows: 80px auto;
 
@@ -16,6 +16,7 @@
     
     .demo-content {
         display: grid;
-        grid-template-columns: 30vh auto;
+        grid-template-columns: minmax(150px, 15%) auto;
+        // grid-template-columns: 30vh auto;
     }
 }
