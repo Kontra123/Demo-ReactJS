@@ -1,56 +1,56 @@
 const fetchMode = { mode: 'cors' };
 
+const baseUrl = 'https://cryptic-peak-36539.herokuapp.com/'
+
 class FetchService {
 
     get = async (url) => {
         const headers = {
             'Content-Type': 'application/x-www-form-urlencoded'
         }
-        const request = new Request(`https://www.json-generator.com/api/json/get/${url}`, {
+
+        const request = new Request(`${baseUrl}${url}`, {
             method: 'GET',
             headers: headers,
         });
 
         return fetch(request, fetchMode).then((response) => {
-                return (response.json());
-            }
-        )
+            return (response.json());
+        })
         .catch((error) => {
-            return ([]);
-        }
-    );
+                return ([]);
+            }
+        );
     };
 
     post = async (url, body) => {
         const headers = {
             'Content-Type': 'application/x-www-form-urlencoded'
         };
-        const request = new Request(`https://www.json-generator.com/api/json/get/${url}`, {
+        const request = new Request(`${baseUrl}${url}`, {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(body)
         });
 
         return fetch(request, fetchMode).then((response) => {
-                return (response.json());
-            }
-        );
+            return (response.json());
+        });
     };
 
     patch = async (url, body) => {
         const headers = {
             'Content-Type': 'application/x-www-form-urlencoded'
         };
-        const request = new Request(`http://www.json-generator.com/api/json/get/${url}`, {
+        const request = new Request(`${baseUrl}${url}`, {
             method: 'PATCH',
             headers: headers,
             body: JSON.stringify(body)
         });
 
         return fetch(request, fetchMode).then((response) => {
-                return (response.json());
-            }
-        );
+            return (response.json());
+        });
     };
 }
 

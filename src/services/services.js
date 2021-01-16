@@ -4,7 +4,7 @@ import resourcesMockData from '../files/data.json'
 class Services {
 
     getResources = async () => {
-        const resources = await fetchService.get('cgoeXIpMWG?indent=2');
+        const resources = await fetchService.get('resources');
         if(resources && resources.length > 0) {
             return resources;
         }
@@ -14,7 +14,7 @@ class Services {
     }
 
     getActions = async () => {
-        const actions = await fetchService.get('ceeeljYHNe?indent=2');
+        const actions = await fetchService.get('actions');
         if(actions && actions.length > 0) {
             return actions;
         }
